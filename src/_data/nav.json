@@ -6,6 +6,10 @@
       "link": "/blog/"
     },
     {
+      "text": "Stuff",
+      "link": "/stuff.html"
+    },
+    {
       "text" : "Other links",
       "link" : "",
       "items" : [

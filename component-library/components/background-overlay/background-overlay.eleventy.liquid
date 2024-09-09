@@ -1,0 +1,8 @@
+<!-- background-overlay.eleventy.liquid -->
+<div class="c-background-overlay" style="background-image: url('{{ bg_image }}');">
+    {% if overlay_image %}
+    <div class="c-overlay-image">
+        <img src="{{ overlay_image }}" alt="{{ overlay_alt }}" class="c-overlay-image__img">
+    </div>
+    {% endif %}
+</div>

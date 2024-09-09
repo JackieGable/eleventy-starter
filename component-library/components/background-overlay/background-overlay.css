@@ -1,0 +1,42 @@
+/* background-overlay.css */
+
+.c-background-overlay {
+    position: relative; /* Position context for the overlay image */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    display: flex; /* Use flexbox to center the overlay image */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    
+}
+
+.c-overlay-image {
+    position: relative; /* Ensure relative positioning */
+}
+
+.c-overlay-image__img {
+    max-width: 100%; /* Allow image to scale with the viewport */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1000; /* Ensure it is on top of the background */
+    margin: 0 auto; /* Ensure the image stays centered */
+}
+
+
+.c-background-overlay:before {
+    /* Overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+  }

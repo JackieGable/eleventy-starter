@@ -1,8 +1,20 @@
-<!-- background-overlay.eleventy.liquid -->
-<div class="c-background-overlay" style="background-image: url('{{ bg_image }}');">
-    {% if overlay_image %}
-    <div class="c-overlay-image">
-        <img src="{{ overlay_image }}" alt="{{ overlay_alt }}" class="c-overlay-image__img">
+<section id="background-overlay">
+    <div class="cs-container c-background-overlay">
+        <div class="cs-content">
+            {% if overlay_image %}
+            <img src="{{ overlay-image}}" width="600" height="auto"
+            class="agglogo"
+            alt="Aggtrans Logo">
+      {% endif %}
+        </div>
     </div>
-    {% endif %}
-</div>
+
+
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+         {% if bg_image %}
+        <img loading="eager" decoding="async" src="{{ bg_image}}" alt="loading" width="1920" height="1200" aria-hidden="true">
+          {% endif %}
+    </picture>
+    </section>
